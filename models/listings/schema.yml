@@ -1,0 +1,48 @@
+
+version: 2
+
+models:
+    - name: address_mmi_subset
+      description: "Subset MMI Addresses"
+      columns:
+          - name: uid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: raw_quality_check
+      description: "RAW Listings joined to LISTINGS_QUALITY_CHECK_RUN"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: joined_listings
+      description: "Raw Listings joined to MMI Bulk Address Data"
+      columns:
+          - name: listing_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: recast_listings
+      description: "Listings with fields recast as required"
+      columns:
+          - name: listing_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+                
+    - name: listings_parsed
+      description: "Listings with fields recast as required"
+      columns:
+          - name: listing_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null                
